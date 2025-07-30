@@ -3,65 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Görev Yöneticim</title>
+    <title>Giriş Yap - Görev Yöneticim</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-    <div class="app-container">
-        <header class="app-header">
-            <div class="header-left">
-                <i class="fas fa-bars menu-icon"></i>
-                <h1>Görevlerim</h1>
-                <button id="addTaskBtn" class="add-task-btn"><i class="fas fa-plus"></i> Oluştur</button>
-            </div>
-            <div class="header-right">
-                <div class="user-profile">
-                    <span>A</span>
-                </div>
-            </div>
-        </header>
-
-        <main class="app-main">
-            <div class="task-list-header">
-                <div class="col col-name">Ad</div>
-                <div class="col col-date">Son Tarih</div>
-                <div class="col col-creator">Oluşturan</div>
-                <div class="col col-assignee">Atanan Kişi</div>
-                <div class="col col-project">Proje</div>
-            </div>
-            <div id="taskList" class="task-list">
-                </div>
-        </main>
-    </div>
-
-    <div id="modal" class="modal-container">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Yeni Görev Oluştur</h2>
-            <form id="taskForm">
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Giriş Yap</h2>
+            <form id="loginForm">
                 <div class="form-group">
-                    <label for="taskName">Görev Adı</label>
-                    <input type="text" id="taskName" required>
+                    <label for="username">Kullanıcı Adı</label>
+                    <input type="text" id="username" required>
                 </div>
                 <div class="form-group">
-                    <label for="dueDate">Son Tarih</label>
-                    <input type="datetime-local" id="dueDate" required>
+                    <label for="password">Parola</label>
+                    <input type="password" id="password" required>
                 </div>
-                <div class="form-group">
-                    <label for="assignee">Atanan Kişi</label>
-                    <input type="text" id="assignee" placeholder="Örn: Ekin Deviren" required>
-                </div>
-                 <div class="form-group">
-                    <label for="projectName">Proje</label>
-                    <input type="text" id="projectName" placeholder="Proje adını girin">
-                </div>
-                <button type="submit" class="submit-btn">Görevi Kaydet</button>
+                <button type="submit" class="submit-btn">Giriş Yap</button>
             </form>
+            <p id="loginError" class="error-message"></p>
+            <div class="switch-form">
+                Hesabın yok mu? <a href="signup.html">Kayıt Ol</a>
+            </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="auth.js"></script>
 </body>
 </html>
